@@ -5,7 +5,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#f5f5f5] border-b border-gray-200">
-      <div className="w-full pl-2 pr-4 md:pl-4 md:pr-8 py-4 md:py-5 flex justify-between items-center">
+      <div className="w-full px-3 md:px-4 py-5 flex justify-between items-center">
         {/* Logo */}
         <img
           src="/logo.PNG"
