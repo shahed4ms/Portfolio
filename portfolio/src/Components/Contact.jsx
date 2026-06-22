@@ -14,6 +14,9 @@ export default function Contact() {
           <p className="text-xl md:text-4xl font-medium break-all">
             shahedsharfi@gmail.com
           </p>
+          <p className="text-xl md:text-4xl font-medium break-all">
+            +91 9659366766
+          </p>
 
           <p className="mt-6 text-gray-600 text-base md:text-lg">
             Coimbatore, Tamil Nadu, India
