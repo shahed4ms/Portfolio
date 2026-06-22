@@ -33,7 +33,7 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements"className="px-8 py-32">
+    <section id="achievements" className="px-8 py-32">
       <div className="section-line"></div>
 
       <h1 className="editorial-title">ACHIEVEMENTS</h1>

@@ -56,7 +56,7 @@ const projects = [
       "Click analytics dashboard",
     ],
   },
-  
+
   {
     title: "JARVIS Voice Agent",
     description:
@@ -108,35 +108,41 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="px-8 py-32">
+    <section id="projects" className="px-6 md:px-8 py-20 md:py-32">
       <div className="section-line"></div>
 
       <h1 className="editorial-title">PROJECTS</h1>
 
-      <div className="mt-20">
+      <div className="mt-10 md:mt-20">
         {projects.map((project, index) => (
           <div key={index} className="border-b border-black">
             <button
               onClick={() => toggleProject(index)}
-              className="w-full py-10 text-left grid md:grid-cols-2"
+              className="w-full py-6 md:py-10 text-left grid grid-cols-1 md:grid-cols-2 gap-4"
             >
-              <div>[{String(index + 1).padStart(2, "0")}]</div>
+              <div className="text-gray-500">
+                [{String(index + 1).padStart(2, "0")}]
+              </div>
 
-              <div className="flex justify-between items-center">
-                <h3 className="text-3xl font-semibold">{project.title}</h3>
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl md:text-3xl font-semibold leading-tight pr-4">
+                  {project.title}
+                </h3>
 
-                <span className="text-3xl">
+                <span className="text-2xl md:text-3xl flex-shrink-0">
                   {openProject === index ? "−" : "+"}
                 </span>
               </div>
             </button>
 
             {openProject === index && (
-              <div className="grid md:grid-cols-2 pb-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-8 md:pb-10">
                 <div></div>
 
                 <div>
-                  <p className="text-gray-700 text-lg">{project.description}</p>
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                    {project.description}
+                  </p>
 
                   <div className="mt-6">
                     <h4 className="font-semibold mb-3">Technologies</h4>
@@ -145,7 +151,7 @@ export default function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 border rounded-full"
+                          className="px-3 py-1 border rounded-full text-sm"
                         >
                           {tech}
                         </span>
@@ -158,7 +164,9 @@ export default function Projects() {
 
                     <ul className="space-y-2">
                       {project.features.map((feature) => (
-                        <li key={feature}>• {feature}</li>
+                        <li key={feature} className="text-sm md:text-base">
+                          • {feature}
+                        </li>
                       ))}
                     </ul>
                   </div>

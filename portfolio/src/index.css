@@ -10,21 +10,27 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: #f5f5f5;
   color: #111;
   font-family: 'Inter', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .editorial-title {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(5rem, 12vw, 10rem);
+  font-size: clamp(4rem, 12vw, 10rem);
   line-height: 0.9;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
+  word-break: break-word;
 }
 
 .section-line {
   border-top: 1px solid #111;
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 .section-label {
@@ -32,8 +38,32 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  color: #6b7280;
 }
 
 .project-row:hover {
-  background: rgba(0,0,0,0.03);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
 }
